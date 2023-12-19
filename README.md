@@ -77,3 +77,22 @@ Here we have compared 3 models.
 1. Model finetuned on COCO dataset. 
 2. Model finetuned on our dataset (Without split).
 3. Model finetuned on our dataset (with split). (3 caption results are merged to generate final result)
+
+
+## Steps to run Flask application shown above:
+- Download our finetuned using this [link](https://drive.google.com/file/d/1eRmaea1Y_Acg2CyptWdwOaOj9DxEhKXW/view?usp=sharing).
+- Place the model file (checkpoint_best_art.pth) under static folder.
+    ```
+    static
+    └── checkpoint_best_art.pth
+    ```
+- run app.py file.
+    ```
+    python app.py
+    ```
+- Open http://127.0.0.1:5002 on your machine.
+- Choose an image and generate a caption.
+- Note: Alternatively for testing Finetuned model on split dataset, dowload model file from this [link](https://drive.google.com/file/d/1C30JITmSgWemctZLwOXWxWsJ45nPu4Xy/view?usp=sharing). And paste the file under static folder. And update the model_url_art.
+    ```
+    model_url_art = 'static/checkpoint_best_art_split.pth'
+    ```

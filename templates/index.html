@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('/static/background-image.jpeg') center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            opacity: 1;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .artistic-header {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 55px;
+            font-weight: 900;
+            color: #fff; /* Text color */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); 
+            margin-top: 50px;
+            /* padding-top: 10px; */
+            margin-bottom: 0px; 
+            padding: 10px; 
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        .text-layer .text-content {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.7); 
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            font-size: 25px !important;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-content-2 {
+            position: relative;
+            z-index: 1;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+            font-size: 25px !important;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #333;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="artistic-header">Art Image Captioning</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="image" style="font-size: larger;">Choose an image:</label>
+        <input type="file" name="image" accept=".jpg, .jpeg, .png" id='imageInput' required>
+        <button type="submit">Generate Caption</button>
+    </form>
+    <img id="selectedImage" style="display:none;" alt="Selected Image">
+    
+    {% if image_name %}
+        <p class="text-content-2">{{ image_name }}</p>
+    {% endif %}
+
+    {% if image_path %}
+    <img style="margin-top: 20px ;" src="{{ image_path }}"/>
+{% endif %}
+
+    <div class="text-layer">
+        {% if caption_text_art %}
+            <p class="text-content">{{ caption_text_art }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+
+
