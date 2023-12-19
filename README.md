@@ -78,8 +78,17 @@ you can change the output file name using --output_file config.
 ### Our machine configurations:
 - 4 NVIDIA Tesla V100 128 GB GPU
 
+## Plots:
+Loss vs Epoch
+![Image](/content/chart-1.jpeg)
+
+Spice score vs Epochs
+
+![Image](/content/chart-2.jpeg)
+
 ## Sample results:
 ![Sample output 2](/content/sample-output-2.png)
+
 
 Here we have compared 3 models.
 1. Model finetuned on COCO dataset. 
@@ -108,6 +117,14 @@ Here we have compared 3 models.
     ```
     model_url_art = 'static/checkpoint_best_art_split.pth'
     ```
+
+## Project Milestones:
+- **Open Source model setup in our environment:** Success
+- **Identifying the data:** Success
+- **Preparation of the input data:** Success
+- **Fine Tuning of the models:** Success
+- **Model evaluation:** Success
+- **Optimizations:** Success
 
 ##  Limitations
 - **Limited dataset:** Original model was finetuned on COCO dataset, which contains high quality 328K images & text pair. While we have finetuned on Iconclass AI test set which contains 87k images with most captions being 1-3 words and concatenated for Image captioning purpose. Preparing a high quality dataset for the Art domain is something we are looking forward to for improving the caption quality. 
