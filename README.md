@@ -43,3 +43,38 @@ annotation
 ├── iconclassVal_split.json
 └── ionclassTest_split.json
 ```
+
+## Steps for the model setup
+- Install pycocoevalcap. Do not install it in Singularity as the code requires write permission on it.
+    ```
+     pip install "git+https://github.com/salaniz/pycocoevalcap.git"
+    ```
+- Download dataset from the iconclass website using this [link](https://iconclass.org/testset/779ba2ca9e977c58d818e3823a676973.zip).
+- unzip the dowloaded file and paste all images in the Dataset/data folder.
+    ```
+    Dataset
+    └── data
+        └──Paste your Image files here.
+    ```
+- install all dependencies.
+    ```
+    pip install requirements.txt
+    ```
+
+## Start the training
+```
+python -m torch.distributed.run --nproc_per_node=4 train_caption_art.py --output_file='output.txt'
+```
+you can change the output file name using --output_file config.
+
+### Our machine configurations:
+- 4 NVIDIA Tesla V100 128 GB GPU
+
+## Sample results:
+![Sample output](/content/sample-output-1.png) 
+![Sample output 2](/content/sample-output-2.png)
+
+Here we have compared 3 models.
+1. Model finetuned on COCO dataset. 
+2. Model finetuned on our dataset (Without split).
+3. Model finetuned on our dataset (with split). (3 caption results are merged to generate final result)
