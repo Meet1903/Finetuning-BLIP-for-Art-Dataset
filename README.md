@@ -80,6 +80,7 @@ you can change the output file name using --output_file config.
 
 ## Plots:
 Loss vs Epoch
+
 ![Image](/content/chart-1.jpeg)
 
 Spice score vs Epochs
