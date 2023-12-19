@@ -139,7 +139,8 @@ def main(args, config):
         val_result_file = save_result(val_result, args.result_dir, 'val_epoch%d'%(epoch), remove_duplicate='image_id')        
   
         test_result = evaluate(model_without_ddp, test_loader, device, config)  
-        test_result_file = save_result(test_result, args.result_dir, 'test_epoch%d'%(epoch), remove_duplicate='image_id')  
+        test_result_file = save_result(test_result, args.result_dir, 'test_epoch%d'%(epoch), remove_duplicate='image_id')
+        dist.barrier()  
 
         if utils.is_main_process():   
             coco_val = art_caption_eval(config['coco_gt_root'],val_result_file,'val')
