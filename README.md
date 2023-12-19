@@ -71,7 +71,6 @@ you can change the output file name using --output_file config.
 - 4 NVIDIA Tesla V100 128 GB GPU
 
 ## Sample results:
-![Sample output](/content/sample-output-1.png) 
 ![Sample output 2](/content/sample-output-2.png)
 
 Here we have compared 3 models.
