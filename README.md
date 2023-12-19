@@ -96,3 +96,7 @@ Here we have compared 3 models.
     ```
     model_url_art = 'static/checkpoint_best_art_split.pth'
     ```
+
+##  Limitations
+- **Limited dataset:** Original model was finetuned on COCO dataset, which contains high quality 328K images & text pair. While we have finetuned on Iconclass AI test set which contains 87k images with most captions being 1-3 words and concatenated for Image captioning purpose. Preparing a high quality dataset for the Art domain is something we are looking forward to for improving the caption quality. 
+- **GPU requirements:** The model finetuning requires high GPU resources. We have trained the model using 4 NVIDIA Tesla V100 in Distributed Data Parallel manner.
