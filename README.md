@@ -83,8 +83,8 @@ you can change the output file name using --output_file config.
 
 Here we have compared 3 models.
 1. Model finetuned on COCO dataset. 
-2. Model finetuned on our dataset (Without split).
-3. Model finetuned on our dataset (with split). (3 caption results are merged to generate final result)
+2. Model finetuned on our dataset (without split).
+3. Model finetuned on our dataset (with split). (3 caption results are merged to generate the final result)
 
 
 ## Steps to run Flask application shown above:
@@ -98,7 +98,11 @@ Here we have compared 3 models.
     ```
     python app.py
     ```
-- Open http://127.0.0.1:5002 on your machine.
+- Open http://127.0.0.1:5002 on your machine. Note: if the port is already in use, you can change below line in app.py to change the port. Update the port variable with new port number.
+    ```
+    port = 5002
+    app.run(debug=True, port=port)
+    ```
 - Choose an image and generate a caption.
 - Note: Alternatively for testing Finetuned model on split dataset, dowload model file from this [link](https://drive.google.com/file/d/1C30JITmSgWemctZLwOXWxWsJ45nPu4Xy/view?usp=sharing). And paste the file under static folder. And update the model_url_art variable in app.py.
     ```
