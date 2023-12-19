@@ -73,7 +73,7 @@ annotation
 ```
 python -m torch.distributed.run --nproc_per_node=4 train_caption_art.py --output_dir='output/art-output'
 ```
-you can change the output file name using --output_file config.
+you can change the output directory name using --output_dir config.
 
 ### Our machine configurations:
 - 4 NVIDIA Tesla V100 128 GB GPU
