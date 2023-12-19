@@ -27,7 +27,7 @@ Example:
 
 1. All text together:
     ```json
-    [{"caption": "sitting figure, "postures of the head", "image": "data/IIHIM_1956438510.jpg", "image_id": "1"}]
+    [{"caption": "sitting figure, postures of the head", "image": "data/IIHIM_1956438510.jpg", "image_id": "1"}]
     ```
 2. Split text:
     ```json
