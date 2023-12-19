@@ -21,7 +21,7 @@ Annotations are generated from the API available on the above link.
 
 Dataset split:
 - Train data: 69224 image & text pairs
-- Validation data: 8653 images & text pairs
+- Validation data: 8653 image & text pairs
 - Test data: 8653 image & text pairs
 
 
