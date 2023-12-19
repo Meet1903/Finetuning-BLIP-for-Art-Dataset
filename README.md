@@ -16,7 +16,15 @@ Welcome to the Modified BLIP (Bootstrapping Language-Image Pre-training for Unif
 
 ## Dataset Overview
 [Iconclass AI Test Set](https://iconclass.org/testset/)
+
 Annotations are generated from the API available on the above link. 
+
+Dataset split:
+- Train data: 69224 image & text pairs
+- Validation data: 8653 images & text pairs
+- Test data: 8653 image & text pairs
+
+
 Two separate annotation files are generated for the performance improvement:
 1. All text together.
 2. Split text.
@@ -92,7 +100,7 @@ Here we have compared 3 models.
     ```
 - Open http://127.0.0.1:5002 on your machine.
 - Choose an image and generate a caption.
-- Note: Alternatively for testing Finetuned model on split dataset, dowload model file from this [link](https://drive.google.com/file/d/1C30JITmSgWemctZLwOXWxWsJ45nPu4Xy/view?usp=sharing). And paste the file under static folder. And update the model_url_art.
+- Note: Alternatively for testing Finetuned model on split dataset, dowload model file from this [link](https://drive.google.com/file/d/1C30JITmSgWemctZLwOXWxWsJ45nPu4Xy/view?usp=sharing). And paste the file under static folder. And update the model_url_art variable in app.py.
     ```
     model_url_art = 'static/checkpoint_best_art_split.pth'
     ```
