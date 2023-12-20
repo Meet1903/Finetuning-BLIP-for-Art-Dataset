@@ -87,6 +87,10 @@ Spice score vs Epochs
 
 ![Image](/content/chart-2.png)
 
+Execution time comparison before & after synchronization
+
+![Image](/content/chart-3.png)
+
 ## Sample results:
 ![Sample output 2](/content/sample-output-2.png)
 
