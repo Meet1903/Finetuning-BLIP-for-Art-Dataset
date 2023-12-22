@@ -66,7 +66,7 @@ annotation
     ```
 - install all dependencies.
     ```
-    pip install requirements.txt
+    pip install -r requirements.txt
     ```
 
 ## Start the training
@@ -86,6 +86,10 @@ Loss vs Epoch
 Spice score vs Epochs
 
 ![Image](/content/chart-2.png)
+
+BLEU score vs Epochs
+
+![Image](/content/chart-4.jpeg)
 
 Execution time comparison before & after synchronization
 
